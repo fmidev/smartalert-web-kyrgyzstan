@@ -1,5 +1,5 @@
 
-var DEBUG = true
+var DEBUG = false
 var map
 var markers = []
 var polygons = []
@@ -549,7 +549,6 @@ function doCAP (dom) {
   if(eventRaw == "lightning warning")
     eventRaw = "thunderstorm"
 
-
   for (p = 0; p < areapolygons.length; p++) {
     var color
     var zindex
@@ -563,7 +562,6 @@ function doCAP (dom) {
       var latLng = latLngs[i].split(',')
       path.push(new L.LatLng(parseFloat(latLng[0]), parseFloat(latLng[1])))
     }
-    console.log('severity:',severity)
     switch (severity) {
       case 'Extreme':
         // Red
@@ -775,8 +773,14 @@ function doCAP (dom) {
         iconAnchor: [alertOptions.iconWidth / 2 + xDisplacement, alertOptions.iconWidth / 2],
         popupAnchor: [0, 0]
       })
-    }
-
+  } else if (~eventRaw.indexOf('mudflow') || ~eventRaw.indexOf('water level')) {
+    var icon = L.icon({
+      iconUrl: symbolPath + 'mudflow.png',
+      iconSize: [alertOptions.iconWidth, alertOptions.iconHeight],
+      iconAnchor: [alertOptions.iconWidth / 2 + xDisplacement, alertOptions.iconWidth / 2],
+      popupAnchor: [0, 0]
+    })
+  }
     // Rainfall Icon
     else if (~eventRaw.indexOf('rain')) {
       var icon = L.icon({
@@ -1004,8 +1008,6 @@ function doCAP (dom) {
       ' '+  t('at') + ' '+dFormatted+' ('+d.dateDiff()+')</i></p>'
     }
 
-    console.log(content)
-    
     // bind markers to marker and polygon
     var popup = L.popup({
       maxWidth: 220,
