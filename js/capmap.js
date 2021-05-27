@@ -754,6 +754,13 @@ function doCAP (dom) {
         iconAnchor: [alertOptions.iconWidth / 2 + xDisplacement, alertOptions.iconWidth / 2],
         popupAnchor: [0, 0]
       })
+    } else if (~eventRaw.indexOf('ice phenomena')) {
+      var icon = L.icon({
+        iconUrl: symbolPath + 'icejamming.png',
+        iconSize: [alertOptions.iconWidth, alertOptions.iconHeight],
+        iconAnchor: [alertOptions.iconWidth / 2 + xDisplacement, alertOptions.iconWidth / 2],
+        popupAnchor: [0, 0]
+      })
     } else if (~eventRaw.indexOf('cold')) {
       var icon = L.icon({
         iconUrl: symbolPath + 'cold.png',
