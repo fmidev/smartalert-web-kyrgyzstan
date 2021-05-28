@@ -14,7 +14,7 @@ translations['ky-KG'] = {
   "Click to show warnings for day 4.": "4-күнгө шашылыш билдирүүнү көрүү үчүн басыңыз",
   "Click to show warnings for day 5.": "5-күнгө шашылыш билдирүүнү көрүү үчүн басыңыз",
   "Click to show all active alerts": "Бардык шашылыш билдирүүлөрдү көрүүүчүн басыңыз",
-  "for": "күтүлгөн",
+  "for": "",
   "Valid from": "баштап",
   "to": "чейин жарактуу",
   "Active for next": "күнгө чейин жарактуу ",
