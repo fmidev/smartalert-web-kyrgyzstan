@@ -38,7 +38,7 @@ translations['ky-KG'] = {
   "Thunderstorm": "Күн күркүрөшү",
   "Heat": "Аномалдуу ысык аба-ырайы",
   "Cold weather": "Аномалдуу суук аба-ырайы",
-  "Wet snow accumulation": "Суу кардын жапышышы",
+  "Wet snow accumulation": "Суу кардын жабышышы",
   "Frost": "Үшүк",
   "Sleet": "Жаан-чачын",
   "Fog": "Туман",

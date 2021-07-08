@@ -15,7 +15,7 @@ translations['ru-KG'] = {
   "Click to show warnings for day 5.": "Нажмите для просмотра  предупреждения на 5-й день",
   "Click to show all active alerts": "Нажмите для просмотра всеактивныепредупреждения",
   "for": "в",
-  "Valid from": "Действительно в период от",
+  "Valid from": "Действительно в период с",		
   "to": "до",
   "Active for next": "действителен для следующий",
   "Issued by": "Подготовлено-",
@@ -42,7 +42,7 @@ translations['ru-KG'] = {
   "Frost": "Заморозки",
   "Sleet": "Cмешанные осадки",
   "Fog": "Туман",
-  "Flooding": "паводки",
+  "Flooding": "Паводки",
   "Rising water level": "Подъемы уровней воды на реках",
   "Mudflow": "Селевые явления",
   "Ice jamming": "Заторно-зажорные явления"
