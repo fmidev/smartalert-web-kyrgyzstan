@@ -985,7 +985,7 @@ function doCAP (dom) {
     // var infowindow = new google.maps.InfoWindow({
     var content = '<h4 class="iw-title">' + info.querySelector('event').textContent + ' ' + t('for') + ' ' + info.querySelector('areaDesc').textContent + '</h4>' +
         '<i>' + t('Valid from') + ' <b>' + fromDateFormatted + '</b><br>' + t('to') + ' <b>' + toDateFormatted + '</b></i><br/>' +
-        active_str +
+        // active_str +
         '<p>' + (info.querySelector('description') ? info.querySelector('description').textContent : '') + '</p>' +
         '<p><i>' + t('Issued by') + ' ' + sender +
         ' ' + t('at') + ' ' + dFormatted + ' (' + d.dateDiff() + ')</i></p>'
@@ -993,7 +993,7 @@ function doCAP (dom) {
     if(selectedLANGUAGE.split("-")[0] === 'ru') {
       content = '<h4 class="iw-title">' + info.querySelector('event').textContent + ' ' + t('for') + ' ' +info.querySelector('areaDesc').textContent +'</h4>' +
       '<i>' + t('Valid from')+' <b>'+fromDateFormatted+'</b><br>'+ t('to') +' <b>'+toDateFormatted+'</b></i><br/>' +
-      active_str +
+      // active_str +
       '<p>' + ( info.querySelector('description') ? info.querySelector('description').textContent : "" )+'</p>' +
       '<p><i>' + t('Issued by') + ' ' + sender +
       ' '+  t('at') + ' '+dFormatted+' ('+d.dateDiff()+')</i></p>'
@@ -1002,7 +1002,7 @@ function doCAP (dom) {
       content = '<h4 class="iw-title">' + info.querySelector('areaDesc').textContent + ' ' + t('for') + ' ' +info.querySelector('event').textContent +'</h4>' +
       //'<i><b>'+fromDayNumber+'-'+fromDayMonthYear+' </b>' +t('Valid from')+'<br>' +' <b>'+toDayNumber+'-'+toDayMonthYear+' </b>'+ t('to') +'</i><br/>' +
       '<i><b>'+fromDateFormatted +' '+ t('Valid from')+'</b><br><b>'+toDateFormatted +' '+ t('to') +'</b></i><br/>' +
-      active_str +
+      // active_str +
       '<p>' + ( info.querySelector('description') ? info.querySelector('description').textContent : "" )+'</p>' +
       '<p><i>' + t('Issued by') + ' ' + sender +
       ' '+  t('at') + ' '+dFormatted+' ('+d.dateDiff()+')</i></p>'
