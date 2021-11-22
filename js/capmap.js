@@ -773,14 +773,35 @@ function doCAP (dom) {
         iconAnchor: [alertOptions.iconWidth / 2 + xDisplacement, alertOptions.iconWidth / 2],
         popupAnchor: [0, 0]
       })
-  } else if (~eventRaw.indexOf('mudflow') || ~eventRaw.indexOf('water level')) {
+    } else if (~eventRaw.indexOf('water level') && !~eventRaw.indexOf('mudflow')) {
+      var icon = L.icon({
+        iconUrl: symbolPath + 'flood.png',
+        iconSize: [alertOptions.iconWidth, alertOptions.iconHeight],
+        iconAnchor: [alertOptions.iconWidth / 2 + xDisplacement, alertOptions.iconWidth / 2],
+        popupAnchor: [0, 0]
+      })
+  } else if (~eventRaw.indexOf('mudflow') && !~eventRaw.indexOf('water level') && !~eventRaw.indexOf('glacial')) {
     var icon = L.icon({
       iconUrl: symbolPath + 'mudflow.png',
       iconSize: [alertOptions.iconWidth, alertOptions.iconHeight],
       iconAnchor: [alertOptions.iconWidth / 2 + xDisplacement, alertOptions.iconWidth / 2],
       popupAnchor: [0, 0]
     })
-  }
+    } else if (~eventRaw.indexOf('glacial')) {
+      var icon = L.icon({
+        iconUrl: symbolPath + 'mudflow2.png',
+        iconSize: [alertOptions.iconWidth, alertOptions.iconHeight],
+        iconAnchor: [alertOptions.iconWidth / 2 + xDisplacement, alertOptions.iconWidth / 2],
+        popupAnchor: [0, 0]
+      })
+    } else if (~eventRaw.indexOf('mudflow') && ~eventRaw.indexOf('water level')) {
+      var icon = L.icon({
+        iconUrl: symbolPath + 'mudflow.png',
+        iconSize: [alertOptions.iconWidth, alertOptions.iconHeight],
+        iconAnchor: [alertOptions.iconWidth / 2 + xDisplacement, alertOptions.iconWidth / 2],
+        popupAnchor: [0, 0]
+      })
+    }
     // Rainfall Icon
     else if (~eventRaw.indexOf('rain')) {
       var icon = L.icon({
