@@ -1,17 +1,23 @@
 <?php
-$DIR=trim(`find data/publishedCap -type d|sort -n|tail -1`);
 
-$FILES = scandir($DIR);
+// $SUBDIRS = [""]; # if no subdirectories are needed
+$SUBDIRS = ["meteorology", "hydrology"];
 
-$capfiles;
+foreach($SUBDIRS as $dir) {
+  $DIR=trim(`find data/$dir/publishedCap -type d|sort -n|tail -1`);
+  $FILES = scandir($DIR);
+  
+  $capfiles;
+  
+  foreach ($FILES as $file)
+    {
+      if (preg_match("/_ALERT_/",$file) || preg_match("/_UPDATE_/",$file))
+        {
+          $capfiles[]=$DIR."/".$file;
+        }
+    }
+}
 
-foreach ($FILES as $file)
-  {
-    if (preg_match("/_ALERT_/",$file) || preg_match("/_UPDATE_/",$file))
-      {
-	$capfiles[]=$DIR."/".$file;
-      }
-  }
 
 header("Content-type: application/json");
 header("Pragma: no-cache");
